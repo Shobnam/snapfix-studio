@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Edit Image</title></head>
+<body>
+  <h1>Edit Your Image</h1>
+  <form method="POST" enctype="multipart/form-data" action="{{ url_for('edit_image') }}">
+    <input type="file" name="image" required><br><br>
+
+    <label>Action:</label>
+    <select name="action" required>
+      <option value="grayscale">Grayscale</option>
+      <option value="jpg">Convert to JPG</option>
+      <option value="webp">Convert to WEBP</option>
+      <option value="pdf">Convert to PDF</option>
+      <option value="none">No Conversion (PNG)</option>
+    </select><br><br>
+
+    <label>Flip:</label>
+    <select name="flip">
+      <option value="">None</option>
+      <option value="horizontal">Horizontal</option>
+      <option value="vertical">Vertical</option>
+    </select><br><br>
+
+    <label>Resize Width:</label>
+    <input type="number" name="resize_width" min="1"><br><br>
+
+    <label>Resize Height:</label>
+    <input type="number" name="resize_height" min="1"><br><br>
+
+    <label>Target Size (KB):</label>
+    <input type="number" name="target_size_kb" min="10"><br><br>
+
+    <button type="submit">Edit Image</button>
+  </form>
+</body>
+</html>
