@@ -2,6 +2,7 @@
 
 echo "Running postinstall script..."
 
-# Example: install dependencies, build assets, run migrations, etc.
+# Install Node.js dependencies and build assets
 npm install
 npm run build
+
